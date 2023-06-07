@@ -246,3 +246,12 @@ fn test(arg: Type) -> RetType {
         }
     }
 }
+
+fn test2(arg: Type) -> RetType {
+    let limit = (n as f64).sqrt() as i32;
+    for a in 2..limit {
+        if n % a == 0 {
+            return JsValue::Bool(false);
+        }
+    }
+}
